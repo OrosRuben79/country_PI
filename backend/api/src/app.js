@@ -16,7 +16,7 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
 
-  const allowedOrigins = ['http://localhost:3000', 'https://country-client-pi-gwui.vercel.app/home']; // update to match the domain you will make the request from
+  const allowedOrigins = ['http://localhost:3000', 'https://country-client-pi-gwui.vercel.app']; // update to match the domain you will make the request from
 	const origin = req.headers.origin;
 	if (allowedOrigins.includes(origin)) {
 		res.setHeader('Access-Control-Allow-Origin', origin);
